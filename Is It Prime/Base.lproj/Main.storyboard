@@ -46,7 +46,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-K3-pvN">
-                                <rect key="frame" x="30" y="216" width="274" height="62"/>
+                                <rect key="frame" x="32" y="243" width="274" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="274" id="TQU-6R-o64"/>
                                     <constraint firstAttribute="height" constant="62" id="VDM-ZQ-gEc"/>
@@ -55,19 +55,40 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zm-sA-4pq">
+                                <rect key="frame" x="110" y="196" width="105" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="105" id="5ya-8c-vdA"/>
+                                    <constraint firstAttribute="height" constant="30" id="KMO-d9-tWD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="MjP-B1-0f7"/>
+                                </constraints>
+                                <state key="normal" title="Is it prime?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7TS-46-sGB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QMQ-aG-2Hz" firstAttribute="top" secondItem="e0f-jd-orj" secondAttribute="bottom" constant="-6" id="02y-5B-g7R"/>
                             <constraint firstAttribute="centerX" secondItem="e0f-jd-orj" secondAttribute="centerX" id="AJn-IR-mel"/>
                             <constraint firstItem="pyv-K3-pvN" firstAttribute="top" secondItem="QMQ-aG-2Hz" secondAttribute="bottom" constant="28" id="NaT-zE-wtb"/>
+                            <constraint firstAttribute="centerX" secondItem="6zm-sA-4pq" secondAttribute="centerX" id="Nqd-tp-TFB"/>
                             <constraint firstItem="e0f-jd-orj" firstAttribute="top" secondItem="XG9-K1-3UT" secondAttribute="bottom" constant="-22" id="RRi-7S-B7B"/>
                             <constraint firstAttribute="centerX" secondItem="XG9-K1-3UT" secondAttribute="centerX" id="SI5-3O-Ybf"/>
                             <constraint firstItem="XG9-K1-3UT" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="17" id="Yz1-8L-393"/>
+                            <constraint firstAttribute="centerX" secondItem="6zm-sA-4pq" secondAttribute="centerX" id="eAq-vd-BdH"/>
+                            <constraint firstItem="6zm-sA-4pq" firstAttribute="top" secondItem="QMQ-aG-2Hz" secondAttribute="bottom" constant="8" id="ekH-DF-Tze"/>
                             <constraint firstAttribute="centerX" secondItem="pyv-K3-pvN" secondAttribute="centerX" id="l0I-SI-lWg"/>
                             <constraint firstAttribute="centerX" secondItem="QMQ-aG-2Hz" secondAttribute="centerX" id="y0n-hm-iha"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="pyv-K3-pvN" id="QN1-h8-WDf"/>
+                        <outlet property="number" destination="QMQ-aG-2Hz" id="chL-sp-XQX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

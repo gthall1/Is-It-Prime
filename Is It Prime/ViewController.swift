@@ -10,6 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var number: UITextField!
+    @IBOutlet weak var message: UILabel!
+    @IBAction func buttonPressed(sender: AnyObject) {
+      
+        var Integer = number.text.toInt()
+        
+        if (Integer != nil) {
+            
+            
+            
+        } else {
+            
+            message.text = "Please enter a number!"
+            
+        }
+        
+        println(number.text)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
