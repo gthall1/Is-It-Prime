@@ -14,11 +14,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var message: UILabel!
     @IBAction func buttonPressed(sender: AnyObject) {
       
+        var isPrime = true
+        
         var Integer = number.text.toInt()
         
         if (Integer != nil) {
             
-            
+            if (Integer < 1) {
+                
+                message.text = "Please enter a positive number!"
+            } else {
+                
+                if (Integer==1) {
+                    
+                    message.text = "1 is not prime!"
+                } else {
+                    
+                    for var i = 2; i<Integer; i++ {
+                        
+                        if (Integer! % i == 0) {
+                            
+                            // Number is not prime
+                            
+                            isPrime = false
+                            
+                        }
+                    }
+                    
+                    if (isPrime == true) {
+                        
+                        message.text = "That number is prime!"
+                        
+                    } else {
+                        
+                        message.text = "That number is not prime!"
+                    }
+                    
+                    
+                    
+                }
+            }
             
         } else {
             
